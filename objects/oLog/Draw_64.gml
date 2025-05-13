@@ -1,0 +1,2 @@
+draw_rectangle(global.screenWidth * .1, global.screenHeight * .05, global.screenWidth * .9, global.screenHeight * .15, true);
+draw_rectangle(global.screenWidth * .1, global.screenHeight * .05, global.screenWidth * .1 + ((global.screenWidth * .9 - global.screenWidth * .1) * sawMeterPercent), global.screenHeight * .15, false);

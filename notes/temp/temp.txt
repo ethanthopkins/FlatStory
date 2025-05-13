@@ -1,0 +1,559 @@
+	switch(instance)
+	{
+		case levelOneSarah: {
+			scTextFeat(.25,c_lime,fSarah,0,true,sSarah, "Sarah",oSarah);		
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: {
+						if (global.Room == rLevel1Room7) && (global.sarahCounter == 0) return(1); //initial game text
+						if (global.Room == rLevel1Room7) && (global.sarahCounter == 1) return(4);
+						if (global.Room == rLevel1Room3) return(5);
+						break;
+					}
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+		} break;
+		case josh: {
+			scTextFeat(.1,c_white,fDefault,0,true,sJosh, "Josh",oJosh);
+			if (global.Room == rLevel1Room3) && (global.joshCounter == 0) return(2); //initial game text
+			if (global.Room == rLevel1Room1) && (global.joshCounter == 0) return(7); //decorative text 
+			if (global.Room == rLevel1Room2) && (global.joshCounter == 0) return(8); //decorative text
+			if (global.Room == rLevel1Room2) && (global.joshCounter == 1) return(9);
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			break;
+		}
+		case save: {
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			return(11);
+		}
+		case oven: {
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.oneOven) return(20);
+			if (!global.oneOven) return(15);
+			break;
+		}
+		case aSign: {
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			return(18); break;
+		}
+		case levelThreeHotelKeep: {
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			return(19); break;
+		}
+		case levelOneSTLeader: {
+			scTextFeat(.25,c_white,fDefault,0,false,sSTLeader,"Leader",oSTLeader);
+			
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.storyProgression == 0) //SUN CELEBRATION
+			{
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 0) return(10); 
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 1) return(11);
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 2) return(12);
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 3) return(16);
+			}
+			if (global.storyProgression == 1) //AFTER FIRE BEAST FIGHT
+			{
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 0) return(32);
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 1) return(33);
+				if (global.Room == rLevel1Room2) && (global.stLeaderCounter == 2) return(34);
+				if (global.Room != rLevel1Room2) && (global.Room != rLevel1RoomChapel) && (global.stLeaderCounter == 2) return(38);
+				if (global.Room == rLevel1RoomChapel) && (global.stLeaderCounter == 2) return(39);
+				if (global.Room == rLevel1RoomChapel) && (global.stLeaderCounter == 3) return(44);
+				if (global.Room == rLevel1RoomChapel) && (global.stLeaderCounter == 4) return(40);			
+				if (global.Room == rLevel1RoomChapel) && (global.stLeaderCounter == 5) return(45);
+			}
+			break;
+		}
+		case august: {
+			scTextFeat(.25,c_white,fAugust,0,false,sAugust, "August",oAugust);
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.story == 0)
+			{
+				if (global.storyProgression == 0) //FIRST AUGUST SPEECH IN FIREBEAST CAVE AFTER FIRST FIGHT W FIREBEAST
+				{
+					if ((global.Room == rLevel1FB1) && (global.augustCounter == 0)) return(31); 
+					if ((global.Room == rLevel1FB1) && (global.augustCounter == 1)) return(3); 
+				}
+			}
+			break;
+		}
+		case lockedGate: {
+			scTextFeat(.25,c_white,fDefault,0,false,sCol, "",oLockedGate);
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.story == 0)
+			{
+				if (global.storyProgression == 0) //FIRST LOCKED GATE IN SKETCHTOWN AFTER STLEader SPEEChs
+				{
+					if (instance == oGameManager.fireBeastGateLock)
+					{
+						if (global.Room == rLevel1Room2) && (!global.fireBeastCaveKey) return(13);
+						if (global.Room == rLevel1Room2) && (global.fireBeastCaveKey) return(14);
+					}
+					if (instance == oGameManager.wolfPineGateLock)
+					{
+						if (global.Room == rLevel1Room2) return(41);
+					}
+				}
+				if (global.storyProgression == 1) //WOLFPINE GATE
+				{
+					if (global.Room == rLevel1Room2) && (!global.wolfPineGateKey) return(42);
+					if (global.Room == rLevel1Room2) && (global.wolfPineGateKey) return(43);
+				}
+				if (global.storyProgression == 2) //WOLFPINE GATE
+				{
+					
+				}
+			}
+			break;
+		}
+		case fireBeast: {
+			scTextFeat(.25,c_orange,fFireBeast,0,false,sFireBeast, "Fire Beast",oFireBeast);
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.story == 0)
+			{
+				if (global.storyProgression == 0) //FIRST FIREBEAST INTRO IN CAVE
+				{
+					if (global.Room == rLevel1FB1) && (global.fireBeastCounter == 0) return(21);
+				}
+			}
+		}
+		case battle: {
+			scTextFeat(.25,c_white,fDefault,0,false,sCol, "",oBattle);
+			switch(global.story) {
+				case 0: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 1: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 2: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				case 3: switch(global.storyProgression) {
+					case 0: break;
+					case 1: break;
+					case 2: break;
+					case 3: break;
+					case 4: break;
+					case 5: break;
+					default: break;
+				}
+				default: break;
+			}
+			if (global.story == 0)
+			{
+				if (global.storyProgression == 0) //FIRST FIREBEAST FIGHT IN CAVE
+				{
+					if (oBattle.optionSelected == 0) return(22); //fight
+					if (oBattle.optionSelected == 1) return(23); //defend
+					if (oBattle.optionSelected == 2) return(25); //item
+					if (oBattle.optionSelected == 3) return(26); //flee
+			
+					if (global.battleCounter == 1) /*(not player's turn)*/ return(29);
+					if (global.battleCounter == 2) /*(not player's turn)*/ return(28);
+					//if (global.battleCounter == 3) PLAYER TURN
+					if (global.battleCounter == 4) return(27);
+					if (global.battleCounter == 5) return(30);
+					//if (global.battleCounter == 6) PLAYER TURN
+					if (global.battleCounter == 7) return(35);
+					if (global.battleCounter == 8) return(36);
+					//if (global.battleCounter == 9) PLAYER TURN
+					if (global.battleCounter == 10) return(37);
+				}
+			}
+		}
+	}

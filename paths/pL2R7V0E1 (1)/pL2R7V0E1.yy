@@ -1,0 +1,25 @@
+{
+  "kind": 0,
+  "closed": true,
+  "precision": 4,
+  "points": [
+    {"speed":100.0,"x":544.0,"y":512.0,},
+    {"speed":100.0,"x":288.0,"y":512.0,},
+    {"speed":100.0,"x":288.0,"y":96.0,},
+    {"speed":100.0,"x":1088.0,"y":96.0,},
+    {"speed":100.0,"x":1088.0,"y":672.0,},
+    {"speed":100.0,"x":960.0,"y":672.0,},
+    {"speed":100.0,"x":960.0,"y":288.0,},
+    {"speed":100.0,"x":800.0,"y":288.0,},
+    {"speed":100.0,"x":800.0,"y":704.0,},
+    {"speed":100.0,"x":544.0,"y":704.0,},
+  ],
+  "parent": {
+    "name": "Forest",
+    "path": "folders/Paths/Forest.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "pL2R7V0E1",
+  "tags": [],
+  "resourceType": "GMPath",
+}

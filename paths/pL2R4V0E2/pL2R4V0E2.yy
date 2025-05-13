@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"pL2R4V0E2",
+  "closed":true,
+  "kind":0,
+  "name":"pL2R4V0E2",
+  "parent":{
+    "name":"Forest",
+    "path":"folders/Paths/Forest.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1088.0,"y":96.0,},
+    {"speed":100.0,"x":1088.0,"y":416.0,},
+    {"speed":100.0,"x":928.0,"y":416.0,},
+    {"speed":100.0,"x":928.0,"y":96.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

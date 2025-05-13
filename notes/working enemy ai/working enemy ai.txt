@@ -1,0 +1,227 @@
+function scEnemyPath(path,pathSpeed)
+{
+#region Enemy Path Manager
+	if (instance_exists(pEnemy))//if (instance_exists(global.enemyOne))
+	{
+		with (self)
+		{
+			 if (path_index = -1) && (!seen)
+			 {
+				path_start(path,pathSpeed,path_action_continue,true);
+					 if (arrived) 
+			 {
+				 //show_debug_message("new position being set" + string(path_position));
+				 path_position = pathPos;
+				 arrived = false;
+			 }
+			 }
+		
+			 pathPosX = path_get_x(path,path_position);
+			 pathPosY = path_get_y(path,path_position);
+			 //show_debug_message("on path");
+		}
+	}
+#endregion
+}
+function scEnemySight(sound)
+{
+	if (!oPlayer.hidden)
+	{
+		draw_set_color(c_white);
+		if ((direction > 315) && (direction < 45)) || ((direction < 225) && (direction > 135))
+		{
+			colID = collision_line(x,y,oPlayer.x,oPlayer.y,oCol,false,true);
+			if colID = noone
+			{
+				playerID = collision_line(x,y,x+lengthdir_x(sight,direction),y,oPlayer,false,true);
+				playerID = collision_line(x,y+sightWidth,x+lengthdir_x(sight,direction),y,oPlayer,false,true);
+				playerID = collision_line(x,y-sightWidth,x+lengthdir_x(sight,direction),y,oPlayer,false,true);
+				if (playerID = oPlayer.id) scPlayerLocated(sound)
+			}
+		}
+		if ((direction > 45) && (direction < 135)) || ((direction > 225) && (direction < 315))
+		{
+			colID = collision_line(x,y,oPlayer.x,oPlayer.y,oCol,false,true);
+			if colID = noone
+			{
+				playerID = collision_line(x,y,x,y+lengthdir_y(sight,direction),oPlayer,false,true);
+				playerID = collision_line(x+sightWidth,y,x,y+lengthdir_y(sight,direction),oPlayer,false,true);
+				playerID = collision_line(x-sightWidth,y,x,y+lengthdir_y(sight,direction),oPlayer,false,true);
+				if (playerID = oPlayer.id) scPlayerLocated(sound)
+			}
+		}
+	}
+}
+function scPlayerLocated(sound)
+{
+	if (!seen)
+	{
+		audio_sound_set_track_position(sound, .5);
+		if (!audio_is_playing(sound)) audio_play_sound(sound,5,false);
+	}
+	//show_debug_message("I see you");
+	seen = true;	
+	investigating = false;
+
+}
+function scEnemyHearing()
+{
+	#region Running
+	if (oPlayer.movementsp = oPlayer.runsp)
+	{
+		playerID = collision_circle(x,y,runHearing,oPlayer,false,true);
+		colID = collision_line(x,y,oPlayer.x,oPlayer.y,oCol,false,true);
+		if colID = noone
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.runNoise-1) scPlayerHeard(randomX,randomY)
+			}
+		}else
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.runNoise-1) 
+				{
+					var randomNumber = irandom_range(0,100);
+					if (randomNumber > 0) && (randomNumber < 10)
+					{
+						randomX = random_range(-30,30);
+						randomY = random_range(-10,10);
+						scPlayerHeard(randomX,randomY);
+					}else return;
+				}
+			}	
+		}
+	}
+	#endregion
+	#region Walking
+	if (oPlayer.global.noise> oPlayer.walkNoise-1)  //(oPlayer.movementsp = oPlayer.walksp)
+	{
+		playerID = collision_circle(x,y,walkHearing,oPlayer,false,true);
+		colID = collision_line(x,y,oPlayer.x,oPlayer.y,oCol,false,true);
+		if colID = noone
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.walkNoise-1) scPlayerHeard(randomX,randomY)
+			}
+		}else
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.walkNoise-1) 
+				{
+					var randomNumber = irandom_range(0,100);
+					if (randomNumber > 0) && (randomNumber < 2)
+					{
+						randomX = random_range(-30,30);
+						randomY = random_range(-1,1);
+						scPlayerHeard(randomX,randomY);
+					}else return;
+				}
+			}	
+		}
+	}
+	#endregion
+	
+	#region crouch hearing
+	if (oPlayer.global.noise> oPlayer.crouchNoise-1) //(oPlayer.movementsp = oPlayer.crouchsp)
+		{
+		playerID = collision_circle(x,y,crouchHearing,oPlayer,false,true);
+		colID = collision_line(x,y,oPlayer.x,oPlayer.y,oCol,false,true);
+				if colID = noone
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.crouchNoise-1) scPlayerHeard(randomX,randomY)
+			}
+		}else //player is behind wall
+		{
+			if (playerID = oPlayer.id)
+			{
+				if (oPlayer.global.noise> oPlayer.crouchNoise-1) 
+				{
+					var randomNumber = irandom_range(0,100);
+					if (randomNumber > 0) && (randomNumber < 1)
+					{
+						randomX = random_range(-30,30);
+						randomY = random_range(-1,1);
+						scPlayerHeard(randomX,randomY);
+					}else return;
+				}
+			}	
+		}
+	}
+	#endregion
+}
+function scPlayerHeard(randomX,randomY)
+{
+	heard = true;
+	investigating = false;
+	positionX = oPlayer.x + randomX;
+	positionY = oPlayer.y + randomY;
+}
+function scEnemyInvestigate()
+{
+	//show_debug_message("investigating");
+	//show_debug_message("my target is: " + string(positionX) + ", " + string(positionY));
+	if (self.x < positionX + 5) && (self.x > positionX - 5) &&
+	(self.y < positionY + 5) && (self.y > positionY - 5)
+	{
+		speedSet = false;
+		investigating = true;
+		arrived = false;
+		alarm[0] = searchingTime;
+		myPath = undefined;
+	} else 
+	{
+		scEnemyMove(positionX, positionY, Speed)	
+	}
+}
+function scBackToPath()
+{
+	//show_debug_message("going back to path");
+	scEnemyMove(pathPosX,pathPosY,2)
+	//show_debug_message("my x goal is: " + string(pathPosX) + " and My y goal is: " + string(pathPosY));
+	//mp_potential_step(pathPosX,pathPosY,1,false);
+	if (self.x < pathPosX + 5) && (self.x > pathPosX - 5) &&
+	(self.y < pathPosY + 5) && (self.y > pathPosY - 5)
+	{
+		backToPath = false;
+		seen = false;
+		investigating = false;
+		heard = false;
+		arrived = true;
+	}
+}
+function scEnemyChase(minChaseSpeed,maxChaseSpeed)
+{
+	//path_delete(myPath);
+	//show_debug_message("chasing");
+	var chaseSpeed = scEnemyChooseSpeed(minChaseSpeed,maxChaseSpeed);
+	scEnemyMove(oPlayer.x,oPlayer.y,chaseSpeed)
+}
+function scEnemyMove(goalX, goalY, Speed)
+{
+	myPath = path_add();
+	mp_grid_path(grid, myPath, x, y, goalX, goalY,false);
+	path_start(myPath,Speed,path_action_stop,true);
+}
+function scCheckGoal()
+{
+	if (x > inst.x -5) && (x < inst.x +5) && (y > inst.y - 5) && (y < inst.y + 5) return true else return false;
+}
+function scEnemyChooseGoal()
+{
+	inst = instance_find(oGoal, irandom(instance_number(oGoal) - 1));	
+	speedSet = false;
+	return inst;
+}
+function scEnemyChooseSpeed(min,max)
+{
+	Speed = random_range(min,max);
+	//show_debug_message("speed: " + string(Speed));
+	speedSet = true;
+	return Speed;
+}

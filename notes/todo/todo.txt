@@ -1,0 +1,11 @@
+REMEMBER YOU HAVE A PLAYTEST SCRIPT THAT IS MESSING WITH SOME OF THE VARIABLES
+
+- start adding in some text that the rest of the npcs say after the fire beast fight. 
+- fix enemy ai and finish the stealth phase level
+- rLevel2Room8 won't be added to the sound array
+- find how to add mouse intensity and shaking to cut the log. 
+
+TREE:
+Color 1: #663931
+COLOR 2: #543029
+COLOR 3: #472823

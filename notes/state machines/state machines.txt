@@ -1,0 +1,11 @@
+room layers
+
+	1lighting
+	2player
+	3object fixtures
+		npcs 
+		enemies
+	4tile fixtures
+	5mgr
+		colliders
+		collision
