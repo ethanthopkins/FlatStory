@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scFlashLight",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scFlashLight",
+  "parent":{
+    "name":"Lighting",
+    "path":"folders/Scripts/Lighting.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

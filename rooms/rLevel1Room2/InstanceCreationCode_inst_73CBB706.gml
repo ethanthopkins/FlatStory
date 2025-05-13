@@ -1,0 +1,1 @@
+oGameManager.oSTLeaderFollow = self.id;

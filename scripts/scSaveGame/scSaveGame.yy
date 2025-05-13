@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scSaveGame",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scSaveGame",
+  "parent":{
+    "name":"Mechanics",
+    "path":"folders/Scripts/Mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

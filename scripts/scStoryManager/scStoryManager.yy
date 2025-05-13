@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scStoryManager",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scStoryManager",
+  "parent":{
+    "name":"Manager",
+    "path":"folders/Scripts/Mechanics/Manager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

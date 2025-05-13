@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scEnemyAI",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scEnemyAI",
+  "parent":{
+    "name":"Manager",
+    "path":"folders/Scripts/Mechanics/Manager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scResetCounter",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scResetCounter",
+  "parent":{
+    "name":"Mechanics",
+    "path":"folders/Scripts/Mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

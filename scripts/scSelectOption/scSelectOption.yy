@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scSelectOption",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scSelectOption",
+  "parent":{
+    "name":"Mechanics",
+    "path":"folders/Scripts/Mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

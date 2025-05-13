@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"snSoundStateMachine",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"snSoundStateMachine",
+  "parent":{
+    "name":"Manager",
+    "path":"folders/Scripts/Mechanics/Manager.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

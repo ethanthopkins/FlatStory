@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"scPlayerNoise",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scPlayerNoise",
+  "parent":{
+    "name":"Player",
+    "path":"folders/Scripts/Player.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

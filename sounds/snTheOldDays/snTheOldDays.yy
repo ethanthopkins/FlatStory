@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snTheOldDays",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":56.00653,
+  "name":"snTheOldDays",
+  "parent":{
+    "name":"Level 2 - WolfPine",
+    "path":"folders/Sounds/Level 2 - WolfPine.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snTheOldDays.wav",
+  "type":0,
+  "volume":0.4,
+}

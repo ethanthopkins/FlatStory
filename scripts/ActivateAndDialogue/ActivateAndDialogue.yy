@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ActivateAndDialogue",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ActivateAndDialogue",
+  "parent":{
+    "name":"Mechanics",
+    "path":"folders/Scripts/Mechanics.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
